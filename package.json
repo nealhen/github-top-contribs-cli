@@ -1,0 +1,15 @@
+{
+  "name": "github-top-contribs-cli",
+  "version": "1.0.0",
+  "description": "Comand line interface that queries the GitHub API and returns the top N contributors per account.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neal Heneghan",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "yargs": "^15.4.1"
+  }
+}
