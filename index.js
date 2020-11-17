@@ -48,7 +48,7 @@ async function getUsers(repos) {
     }));
 }
 
-async function getData(url = '') {
+async function getData(url = '', /* */) {
     const headers = {
         'Authorization': `token ${accessToken}`,
         'Content-Type': 'application/json'
@@ -62,6 +62,8 @@ async function getData(url = '') {
         if (!response.ok) {
             throw Error(response.statusText);
         }
+        // if request limit hit return error
+        // if more than one page call getData(nextLink); and concat response. Make this func. recursive
         return response;
     });
     const results = await response.json();
